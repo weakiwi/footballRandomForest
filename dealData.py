@@ -2,8 +2,9 @@
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
-df = pd.read_csv("1419.csv")
-csv_len = len(df)
+team_code="1419"
+
+df = pd.read_csv(team_code + ".csv")
 train, test = df.iloc[1:150,:], df.iloc[150:200,:]
 y_train, X_train = train["funny_rating"], train.drop(["funny_rating", "stars"], axis = 1)
 X_test = test.drop(["funny_rating", "stars"], axis = 1)

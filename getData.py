@@ -28,6 +28,12 @@ for i in m:
             tmp.append(0)
         del tmp[0:8]
         #tmp = tmp[8:19]
+        tmp_1 = 0
+        for i in tmp:
+            if i == "0":
+                tmp_1 += 1
+        if tmp_1 > 7:
+            continue
         game_degree = lambda x:abs(int(x[0])-int(x[1]))
         if game_degree(tmp) < 3:
             tmp.append(1)
