@@ -35,7 +35,7 @@ for i in m:
         if tmp_1 > 7:
             continue
         game_degree = lambda x:abs(int(x[0])-int(x[1]))
-        if game_degree(tmp) < 3:
+        if (game_degree(tmp) > 0 and tmp[-1] == 1) or (game_degree(tmp) < 0 and tmp[-1] == 0):
             tmp.append(1)
         else:
             tmp.append(0)
