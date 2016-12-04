@@ -5,7 +5,7 @@ import csv
 import re
 import codecs
 
-team_code = "1419"
+team_code = "348"
 
 r = requests.get('http://zq.win007.com/jsData/teamInfo/teamDetail/tdl' + team_code  + '.js')
 tmp = r.content
