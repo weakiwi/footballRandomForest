@@ -21,4 +21,6 @@ for j,k in zip(predict_tmp,test["funny_rating"]):
         test_fail = test_fail + 1
 print test_success
 print test_fail
-print sorted(zip(X_train.columns, model.feature_importances_).keys())
+d = zip(X_train.columns, model.feature_importances_)
+d = dict(d)
+print sorted(d.items(), key=lambda item:item[1])
